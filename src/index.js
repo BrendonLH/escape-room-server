@@ -4,9 +4,12 @@ const app = express();
 
 app.use(cors());
 
+const riddles = require('./riddles.js');
+console.log(riddles);
+
 // get riddles
 app.get('/riddles',(request,response) => {
-    response.json({ message: "{add riddle object here}"})
+    response.json({ message: {riddles} });
 });
 
 // post route to DB
