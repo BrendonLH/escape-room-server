@@ -1,15 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const riddles = require('./riddles.js');
 
 app.use(cors());
 
-const riddles = require('./riddles.js');
-console.log(riddles);
-
 // get riddles
 app.get('/riddles',(request,response) => {
-    response.json({ message: {riddles} });
+    response.json({ message: {riddles} });  
 });
 
 // post route to DB
