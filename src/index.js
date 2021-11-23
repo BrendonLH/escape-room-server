@@ -4,9 +4,14 @@ const app = express();
 
 app.use(cors());
 
-app.get('/',(request,response) => {
+// get riddles
+app.get('/riddles',(request,response) => {
     response.json({ message: "{add riddle object here}"})
 });
+
+// post route to DB
+
+// get route for top scores
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('server up and running');
